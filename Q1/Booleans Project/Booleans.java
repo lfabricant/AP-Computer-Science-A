@@ -1,10 +1,10 @@
 /**
- * Write a description of class booleans here.
+ * Write a description of class Booleans here.
  *
  * @author (Lindsay Fabricant)
  * @version (10/3/19)
  */
-public class booleans
+public class Booleans
 {
   public static void main(String [] args)
   {
