@@ -1,31 +1,20 @@
 /**
- * This class inserts a value into an array.
+ * Write a description of class DoNow1210 here.
  *
  * @author (Lindsay Fabricant)
- * @version (12/9/19)
+ * @version (12/10/19)
  */
-public class DowNow129
+public class DoNow1210
 {
-    public static int[] insertValue(int[] sortedNums, int valueToInsert){
-        int lastZero = sortedNums.length-1;
-        while(sortedNums[lastZero] == 0){
-            lastZero--;
-        }
-        lastZero++; // goes to term before without this
-        int indexToReplace = lastZero;
-        for(int i = 0; i < indexToReplace; i++){
-            if(sortedNums[i] > valueToInsert){
-                indexToReplace = i;
-                break;
-            }
-        }
-        for(int i = lastZero; i > indexToReplace; i--){
-            sortedNums[i] = sortedNums[i-1];
-        }
-        sortedNums[indexToReplace] = valueToInsert;
-        return sortedNums;
-    }  
-     public static void printHelper(int[] arr){
+    public static int[] randomArray(int n, int a, int b){
+         int[] var = new int[n];
+         int count = 0;
+         for(int i = 0; i <= n-1; i++){
+             var[i] = (int)(Math.random()*(b+1-a)+a);
+         }
+         return var;
+    }
+    public static void printHelper(int[] arr){
         int lastIndex = arr.length-1;
         System.out.print("{");
         for(int i = 0; i < arr.length-1; i++){
@@ -34,7 +23,6 @@ public class DowNow129
         System.out.print(arr[lastIndex] + "}");
     }
     public static void main(String[] args){
-        int[] test = {1,1,2,3,8,21,0,0,0};
-        printHelper(insertValue(test, 5));
+        printHelper(randomArray(6,1,22));
     }
 }
