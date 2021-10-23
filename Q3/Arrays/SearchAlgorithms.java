@@ -1,10 +1,4 @@
-/**
- * Write a description of class Search here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Search
+public class SearchAlgorithms
 {
     public static void main(String[] args){
         int[] n = {5,6,9,-2,20,4,2};
