@@ -1,11 +1,11 @@
 import java.util.Arrays;
 /**
- * Write a description of class Occurances here.
+ * Write a description of class OccurrencesStudent here.
  *
  * @author (Lindsay Fabricant)
  * @version (2/11/20)
  */
-public class OccurancesStudent
+public class OccurrencesStudent
 {
     // @precondition : for all methods, assume that all parameters are not empty, or null
     public static void main(String[] args){
