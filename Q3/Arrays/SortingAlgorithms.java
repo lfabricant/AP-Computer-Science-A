@@ -2,10 +2,13 @@ public class SortingAlgorithms {
     public static void selectionSort(int[] nums){
          int index = 0;
          for(int i = 0; i < nums.length; i++){
-           if(nums[i] < nums[index]){
-                 nums = sort(i,index, nums);
-                 index = i;
-           }
+            index = i;
+            for(int j = 0; j < nums.length;j ++){
+                if(nums[j] < nums[index]){
+                    nums = sort(i,index, nums);
+                    index = i;
+                }
+            }
          }
          printHelperInt(nums);
     }
@@ -27,13 +30,15 @@ public class SortingAlgorithms {
         int arrays = (int)((Math.random()*6)+5);
         for(int i = 0; i < arrays; i++){
             int[] arr = randArrayGenerator(1,100,(int)(Math.random()*6+15));
-           System.out.println("Create an array: ");
+            System.out.println("Create an array: ");
             printHelperInt(arr);
+            System.out.println();
             System.out.println("Sort an array: ");
             selectionSort(arr);
             System.out.println();
-            System.out.println();
             insertionSort(arr);
+            System.out.println();
+            System.out.println();
         }
     }
     private static int[] randArrayGenerator(int start, int end, int numTerms){
